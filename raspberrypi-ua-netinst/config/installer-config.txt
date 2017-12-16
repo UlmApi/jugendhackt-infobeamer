@@ -1,0 +1,16 @@
+preset=minimal
+packages=vim,avahi-daemon,sudo,unionfs-fuse,wireless-tools,firmware-ralink,i2c-tools,wpasupplicant,python,libevent-2.0-5,libavformat56,libpng12-0,libfreetype6,libavresample2,git,libraspberrypi-dev
+root_ssh_pwlogin=0
+root_ssh_pubkey=''
+username=hase
+userpw=baer
+usersysgroups="users,video"
+userperms_admin=1
+gpu_mem=256
+console_blank='0'
+bootsize=+1024M
+rootsize=+3072M
+readonly=true
+release=jessie
+timezone="Europe/Berlin"
+hostname=jhpi

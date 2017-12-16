@@ -1,0 +1,26 @@
+# To add custom files on the target system:
+#
+# Create one or more file lists and save the list with the extension ".list" in this folder.
+#
+# Add one line per file using this format:
+# <ownership> <permission> <path/filename>
+#
+# <ownership>     OWNER[:GROUP] (see `man chown`)
+# <permission>    MODE  (see `man chmod`)
+# <path/file>     /path/as/it/will/appear/on/the/target/system.txt
+# 
+# Source files are stored in the directory `files/root` in the same path as where they will be stored on the target system.
+#
+# EXAMPLE:
+# A file placed on the SD-card in /raspberrypi-ua-netinst/config/files/root/home/pi/.bashrc is listed as follows:
+# pi:pi  755  /home/pi/.bashrc
+hase:hase 755 /usr/local/bin/prepare-beamer
+hase:hase 444 /etc/systemd/system/prepare-beamer.service
+hase:hase 755 /etc/systemd/system/set-hostname
+hase:hase 444 /etc/systemd/system/set-hostname.service
+hase:hase 444 /etc/systemd/system/info-beamer.service
+hase:hase 444 /etc/systemd/system/beamer-update.timer
+hase:hase 444 /etc/systemd/system/beamer-update.service
+hase:hase 444 /etc/systemd/system/beamer-clock.timer
+hase:hase 444 /etc/systemd/system/beamer-clock.service
+hase:hase 755 /info-beamer-pi-0.9.8-beta.3261a8-jessie.tar.gz

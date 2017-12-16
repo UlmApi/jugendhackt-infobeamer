@@ -1,0 +1,19 @@
+################################################
+### Various system cleanup / settings
+
+# Advertise the SSH service (Bonjour)
+echo '<?xml version="1.0" standalone="no"?><!--*-nxml-*--><!DOCTYPE service-group SYSTEM "avahi-service.dtd"><service-group><name replace-wildcards="yes">WebCamp SSH - %h</name><service><type>_ssh._tcp</type><port>22</port></service></service-group>' > /etc/avahi/services/ssh.service
+
+# Enable the hostname setter
+chroot /rootfs /bin/systemctl enable set-hostname.service
+chroot /rootfs /bin/systemctl enable prepare-beamer.service
+chroot /rootfs /bin/systemctl enable info-beamer.service
+chroot /rootfs /bin/systemctl enable beamer-clock.timer
+chroot /rootfs /bin/systemctl enable beamer-update.timer
+
+chroot /rootfs /usr/bin/git clone https://github.com/webcampsi/info-beamer.git /srv/info-beamer
+
+################################################
+### Install Info-Beamer
+chroot /rootfs /bin/tar xvf info-beamer-pi-0.9.8-beta.3261a8-jessie.tar.gz -C /home/hase
+chroot /rootfs chown -R hase:hase /home/hase/info-beamer-pi
