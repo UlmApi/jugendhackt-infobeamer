@@ -8,9 +8,9 @@ Ideally, it will provide an unattended installation and start from there.
 
 To get your own fahrplan and visualization, perform the following steps:
 
- # Download the current version of [raspberrypi-ua-netinst](https://github.com/FooDeas/raspberrypi-ua-netinst) and write it onto your SD card, e.g. `xzcat raspberrypi-ua-netinst-v2.0.0.img.xz | sudo dd bs=4M of=/dev/mmcblk0`
- # Copy the files in the [/raspberrypi-ua-netinst/config](raspberrypi-ua-netinst/config) folder into the `/raspberrypi-ua-netinst/config` folder in the freshly created SD card
- # Insert the SD card into your Pi, connect it to LAN and power and keep your fingers crossed – raspbian, info-beamer and the jugendhackt-infobeamer packages should be installed automatically and henceforth be started after booting.
+ 1. Download the current version of [raspberrypi-ua-netinst](https://github.com/FooDeas/raspberrypi-ua-netinst) and write it onto your SD card, e.g. `xzcat raspberrypi-ua-netinst-v2.0.0.img.xz | sudo dd bs=4M of=/dev/mmcblk0`
+ 1. Copy the files in the [/raspberrypi-ua-netinst/config](raspberrypi-ua-netinst/config) folder into the `/raspberrypi-ua-netinst/config` folder in the freshly created SD card
+ 1. Insert the SD card into your Pi, connect it to LAN and power and keep your fingers crossed – raspbian, info-beamer and the jugendhackt-infobeamer packages should be installed automatically and henceforth be started after booting.
 
 ## Updating the schedule
 
@@ -19,12 +19,14 @@ To get your own fahrplan and visualization, perform the following steps:
  * export the csv fahrplan by copying the `fahrplan` folder into your [voctosched](https://github.com/zuntrax/voctosched) base directory and calling the ini file, e.g.: `python3.6 schedule.py -vvd -c fahrplan/jugendhackt.ini`
  * make the resulting schedule.xml accessible, e.g. by calling a simple http server from within the jh-fahrplan directory: `python3 -m http.server 8082`
 
-## Acknowledgements
-
-The unattended installation script and how the information is called after booting is heavily based on [webcampsi/info-beamer](https://github.com/webcampsi/info-beamer).
-
 ## TODO
 
  * `wget info-beamer-pi` instead of delivering it with this repo (which kind of taints the license)
  * Add and refine info-beamer visualization for info-beamer
  * Streamline the schedule export process
+
+## Acknowledgements and LICENSE
+
+The unattended installation script and how the information is called after booting is heavily based on [webcampsi/info-beamer](https://github.com/webcampsi/info-beamer), licensed under the MIT license.
+
+Please note that Jugend hackt kindly asks you to get in touch with them before using Jugend hackt artwork and/or the name in your own projects :)
