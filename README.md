@@ -19,6 +19,12 @@ To get your own fahrplan and visualization, perform the following steps:
  * export the csv fahrplan by copying the `fahrplan` folder into your [voctosched](https://github.com/zuntrax/voctosched) base directory and calling the ini file, e.g.: `python3.6 schedule.py -vvd -c fahrplan/jugendhackt.ini`
  * make the resulting schedule.xml accessible, e.g. by calling a simple http server from within the jh-fahrplan directory: `python3 -m http.server 8082`
 
-### Using the fahrplan with info-beamer
+## Acknowledgements
 
-Afterwards, you may import the fahrplan for further use with info-beamer: `python schedulefetcher/service`
+The unattended installation script and how the information is called after booting is heavily based on [webcampsi/info-beamer](https://github.com/webcampsi/info-beamer).
+
+## TODO
+
+ * `wget info-beamer-pi` instead of delivering it with this repo (which kind of taints the license)
+ * Add and refine info-beamer visualization for info-beamer
+ * Streamline the schedule export process
