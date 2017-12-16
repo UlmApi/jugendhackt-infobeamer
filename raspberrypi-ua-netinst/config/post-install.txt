@@ -11,7 +11,7 @@ chroot /rootfs /bin/systemctl enable info-beamer.service
 chroot /rootfs /bin/systemctl enable beamer-clock.timer
 chroot /rootfs /bin/systemctl enable beamer-update.timer
 
-chroot /rootfs /usr/bin/git clone https://github.com/webcampsi/info-beamer.git /srv/info-beamer
+chroot /rootfs /usr/bin/git clone https://github.com/UlmApi/jugendhackt-infobeamer.git /srv/info-beamer
 
 ################################################
 ### Install Info-Beamer
