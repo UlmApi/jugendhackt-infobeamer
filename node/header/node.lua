@@ -1,7 +1,7 @@
 gl.setup(1920, 200)
 
 logo = resource.load_image("jh-ulm.png")
-font = resource.load_font("OpenSans-Regular.ttf")
+font = resource.load_font("OpenSans-Bold.ttf")
 
 
 local clock = (function()
