@@ -1,9 +1,7 @@
 #!/usr/bin/python
-import socket, datetime, pytz
+import socket, datetime
 
-met = pytz.timezone("Europe/Berlin")
-
-now = datetime.datetime.now(pytz.utc).astimezone(met)
+now = datetime.datetime.now()
 since_midnight = (now - now.replace(hour=0, minute=0, second=0)).seconds
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
