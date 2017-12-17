@@ -34,5 +34,5 @@ end)()
 function node.render()
   --gl.clear(1, 1, 1, 0.25)
   logo:draw(40, 30, 546, 190)
-  font:write(1400, 30, clock.get(), 160, 1,1,1,1)
+  font:write(1400, 30, clock.get(), 160, 0,0,0,1)
 end

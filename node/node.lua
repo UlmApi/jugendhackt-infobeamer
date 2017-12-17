@@ -8,4 +8,7 @@ function node.render()
   local header = resource.render_child("header")
   header:draw(0,0,1920,200)
 
+  local schedule = resource.render_child("schedule")
+  schedule:draw(0,200,1920,970)
+
 end
